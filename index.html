@@ -17,14 +17,14 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background-color: #3b82f6; /* Blue-500 */
+            background-color: #dc2626; /* Red-600 */
             transform: translateX(-50%);
         }
         .timeline-dot {
             width: 1rem;
             height: 1rem;
-            background-color: #1d4ed8; /* Blue-700 */
-            border: 3px solid #bfdbfe; /* Blue-100 */
+            background-color: #991b1b; /* Red-800 */
+            border: 3px solid #fecaca; /* Red-200 */
             border-radius: 50%;
             position: absolute;
             left: 50%;
@@ -44,12 +44,12 @@
             }
             .timeline-card-left {
                 margin-left: 2.5rem;
-                border-left: 2px solid #93c5fd;
+                border-left: 2px solid #fca5a5; /* Red-300 */
                 padding-left: 1rem;
             }
             .timeline-card-right {
                 margin-left: 2.5rem;
-                border-left: 2px solid #93c5fd;
+                border-left: 2px solid #fca5a5; /* Red-300 */
                 padding-left: 1rem;
             }
         }
@@ -62,8 +62,8 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'rizal-blue': '#1e3a8a',
-                        'rizal-gold': '#fcd34d',
+                        'rizal-primary': '#991b1b', /* Deep Red */
+                        'rizal-accent': '#fef2f2', /* Light Red/White */
                     }
                 }
             }
@@ -73,22 +73,29 @@
 <body class="bg-gray-50 font-sans text-gray-800 antialiased">
 
     <!-- Header & Title -->
-    <header class="bg-rizal-blue text-white shadow-xl py-8 mb-8 sticky top-0 z-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">The Shaping of a Hero:</h1>
-            <h2 class="text-xl sm:text-2xl font-light mt-1 text-rizal-gold">José Rizal's Character Development</h2>
+    <header class="bg-rizal-primary text-white shadow-xl py-6 mb-8 sticky top-0 z-20">
+        <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+            <div class="text-left">
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">The Shaping of a Hero</h1>
+                <h2 class="text-lg sm:text-xl font-light mt-0 text-red-300">José Rizal's Character Development</h2>
+            </div>
+            <!-- Mapua Malayan Colleges Mindanao Logo - PATH UPDATED -->
+            <img src="./images/mmcm-logo.png" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/80x80/991b1b/ffffff?text=MMCM+Logo';"
+                 alt="Mapua Malayan Colleges Mindanao Logo" 
+                 class="w-16 h-16 rounded-full border-2 border-white object-cover">
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 pb-12">
 
         <!-- I. Introduction -->
-        <section id="section-intro" class="mb-12 p-6 bg-white rounded-xl shadow-lg">
-            <h3 class="text-2xl font-bold text-rizal-blue mb-4">I. Introduction</h3>
+        <section id="section-intro" class="mb-12 p-6 bg-white rounded-xl shadow-lg border-t-4 border-red-600">
+            <h3 class="text-2xl font-bold text-rizal-primary mb-4">I. Introduction</h3>
             <div class="space-y-4 text-lg">
                 <p>José Protacio Rizal Mercado y Alonso Realonda (1861–1896) stands as the Philippines' national hero, a polymath, doctor, writer, and central figure in the country's reform movement during the Spanish colonial era. His intellectual prowess and moral courage set the foundation for Filipino nationalism.</p>
                 <p class="font-semibold italic text-gray-600">Thesis Statement:</p>
-                <p>José Rizal’s character and eventual heroism were profoundly shaped by a unique convergence of **inherent biological traits**, his **privileged yet politically charged family environment**, and the **brutal realities of Spanish colonial rule**, all of which crystallized his commitment to non-violent reform and intellectual enlightenment as the primary path to national liberation.</p>
+                <p>José Rizal’s character and eventual heroism were profoundly shaped by a unique convergence of <span class="italic">inherent biological traits</span>, his <span class="italic">privileged yet politically charged family environment</span>, and the <span class="italic">brutal realities of Spanish colonial rule</span>, all of which crystallized his commitment to non-violent reform and intellectual enlightenment as the primary path to national liberation.</p>
             </div>
         </section>
 
@@ -96,21 +103,22 @@
         <div id="timeline-container" class="relative">
             <div id="timeline-line"></div>
 
-            <!-- Helper function for the dot positioning, use multiples of 200 for clean spacing (0, 200, 400, 600, ...) -->
-
             <!-- II. Biological Factors (1861 - Birth) -->
             <div class="timeline-dot" style="top: 50px;"></div>
             <div class="relative py-12 md:py-8 timeline-card-right">
                 <div class="md:w-1/2 md:ml-auto md:pr-12">
-                    <div class="bg-blue-50 p-6 rounded-xl shadow-md space-y-3">
-                        <h4 class="text-xl font-semibold text-rizal-blue">II. Biological Factors (Inherited & Innate)</h4>
+                    <div class="bg-red-50 p-6 rounded-xl shadow-md space-y-3">
+                        <h4 class="text-xl font-semibold text-rizal-primary">II. Biological Factors (Inherited & Innate)</h4>
                         <p class="text-sm font-medium text-gray-500">The Seeds of Genius (1861)</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 text-base">
                             <li><span class="font-bold">A. Inherited Traits:</span> Rizal inherited remarkable intelligence and a refined sensibility from his mother, Teodora Alonso (a woman of sharp intellect and poetry), and a strong physique and sense of self-respect from his father, Francisco Mercado.</li>
                             <li><span class="font-bold">B. Physical Characteristics:</span> His relatively small stature is often cited, potentially fueling an intense drive for intellectual excellence to compensate. His acute visual aptitude led him to pursue ophthalmology, turning a biological gift into a humanitarian tool.</li>
                         </ul>
-                        <!-- [Image Placeholder: Rizal's portrait or a sketch of Calamba] -->
-                        <img src="https://placehold.co/400x250/3b82f6/ffffff?text=Biological+Traits+Image" alt="Rizal's Calamba Home" class="w-full h-auto rounded-lg mt-3 object-cover">
+                        <!-- Image URL for Calamba Home - PATH UPDATED -->
+                        <img src="./images/rizal-calamba-home.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/991b1b/ffffff?text=Rizal+Ancestral+Home+Calamba';"
+                             alt="Rizal's Calamba Home" 
+                             class="w-full h-auto rounded-lg mt-3 object-cover shadow-inner">
                     </div>
                 </div>
             </div>
@@ -119,14 +127,19 @@
             <div class="timeline-dot" style="top: 450px;"></div>
             <div class="relative py-12 md:py-8 timeline-card-left">
                 <div class="md:w-1/2 md:mr-auto md:pl-12">
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-rizal-gold space-y-3">
-                        <h4 class="text-xl font-semibold text-rizal-blue">III. Environmental Factors (The Crucible)</h4>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600 space-y-3">
+                        <h4 class="text-xl font-semibold text-rizal-primary">III. Environmental Factors (The Crucible)</h4>
                         <p class="text-sm font-medium text-gray-500">Family, Education, and Colonial Injustice</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 text-base">
                             <li><span class="font-bold">A. Family Background:</span> Born into the wealthy *Illustrado* class in Calamba, Rizal received a high-quality, disciplined upbringing focused on arts, literature, and religion. His mother's wrongful imprisonment (1871) was his first direct encounter with Spanish injustice.</li>
                             <li><span class="font-bold">B. Educational Experiences:</span> Jesuit education at Ateneo fostered intellectual freedom, while the Dominican system at UST exposed him to racial discrimination and institutional abuse, driving him to seek liberal education abroad.</li>
-                            <li><span class="font-bold">C. Social & Political Context:</span> The execution of the three priests, **GOMBURZA (1872)**, served as the catalytic event that transformed his personal grievances into a lifetime commitment to national reform.</li>
+                            <li><span class="font-bold">C. Social & Political Context:</span> The execution of the three priests, <span class="font-bold">GOMBURZA (1872)</span>, served as the catalytic event that transformed his personal grievances into a lifetime commitment to national reform.</li>
                         </ul>
+                        <!-- Image URL for GOMBURZA - PATH UPDATED -->
+                        <img src="./images/gomburza-martyrs.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/991b1b/ffffff?text=GOMBURZA+Martyrs';"
+                             alt="GOMBURZA Martyrs" 
+                             class="w-full h-auto rounded-lg mt-3 object-cover shadow-inner">
                     </div>
                 </div>
             </div>
@@ -135,16 +148,19 @@
             <div class="timeline-dot" style="top: 850px;"></div>
             <div class="relative py-12 md:py-8 timeline-card-right">
                 <div class="md:w-1/2 md:ml-auto md:pr-12">
-                    <div class="bg-blue-50 p-6 rounded-xl shadow-md space-y-3">
-                        <h4 class="text-xl font-semibold text-rizal-blue">IV. Key Life Experiences (1882–1896)</h4>
+                    <div class="bg-red-50 p-6 rounded-xl shadow-md space-y-3">
+                        <h4 class="text-xl font-semibold text-rizal-primary">IV. Key Life Experiences (1882–1896)</h4>
                         <p class="text-sm font-medium text-gray-500">Travel, Writing, and Exile</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 text-base">
-                            <li><span class="font-bold">A. Experiences Abroad (1882–1892):</span> His time in Europe (Spain, France, Germany) led to the publication of **Noli Me Tángere** (1887) and **El Filibusterismo** (1891). These novels revealed his unparalleled literary strength and his willingness to sacrifice personal safety for national consciousness.</li>
-                            <li><span class="font-bold">B. Life in Dapitan (1892–1896):</span> Exiled by the colonial government, Rizal demonstrated extraordinary **resilience and practicality** by serving as a teacher, doctor, community planner, and farmer. This period showcased his commitment to constructive nation-building.</li>
-                            <li><span class="font-bold">C. Arrest, Trial, & Execution (1896):</span> His final days revealed his unwavering **moral strength** and dignity in the face of death, solidifying his role as a martyr for Filipino liberty.</li>
+                            <li><span class="font-bold">A. Experiences Abroad (1882–1892):</span> His time in Europe (Spain, France, Germany) led to the publication of <span class="font-bold">Noli Me Tángere</span> (1887) and <span class="font-bold">El Filibusterismo</span> (1891). These novels revealed his unparalleled literary strength and his willingness to sacrifice personal safety for national consciousness.</li>
+                            <li><span class="font-bold">B. Life in Dapitan (1892–1896):</span> Exiled by the colonial government, Rizal demonstrated extraordinary <span class="font-bold">resilience and practicality</span> by serving as a teacher, doctor, community planner, and farmer. This period showcased his commitment to constructive nation-building.</li>
+                            <li><span class="font-bold">C. Arrest, Trial, & Execution (1896):</span> His final days revealed his unwavering <span class="font-bold">moral strength</span> and dignity in the face of death, solidifying his role as a martyr for Filipino liberty.</li>
                         </ul>
-                        <!-- [Image Placeholder: Noli/Fili covers or a map of Europe/Dapitan] -->
-                        <img src="https://placehold.co/400x250/4ade80/000000?text=Novels+and+Travels+Image" alt="Rizal's Travels" class="w-full h-auto rounded-lg mt-3 object-cover">
+                        <!-- Image URL for Noli Me Tangere cover - PATH UPDATED -->
+                        <img src="./images/noli-me-tangere-cover.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/991b1b/ffffff?text=Noli+Me+Tangere+Cover';"
+                             alt="Noli Me Tangere Cover" 
+                             class="w-full h-auto rounded-lg mt-3 object-cover shadow-inner">
                     </div>
                 </div>
             </div>
@@ -153,13 +169,13 @@
             <div class="timeline-dot" style="top: 1300px;"></div>
             <div class="relative py-12 md:py-8 timeline-card-left">
                 <div class="md:w-1/2 md:mr-auto md:pl-12">
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-rizal-gold space-y-3">
-                        <h4 class="text-xl font-semibold text-rizal-blue">V. Character Analysis & Evolution</h4>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600 space-y-3">
+                        <h4 class="text-xl font-semibold text-rizal-primary">V. Character Analysis & Evolution</h4>
                         <p class="text-sm font-medium text-gray-500">The Human Hero</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 text-base">
-                            <li><span class="font-bold">A. Virtues and Strengths:</span> **Patriotism, Intellectual Genius** (polymath and linguist), **Moral Courage**, and **Discipline**. His greatest strength was his belief in non-violence and the power of education over force.</li>
-                            <li><span class="font-bold">B. Shortcomings and Weaknesses:</span> **Emotional Vulnerability** (especially concerning Leonor Rivera), **Overly Cautious Pragmatism** (initially denouncing the Revolution, believing reforms must come from above), and a degree of **Idealism** that sometimes detached him from the urgency of the masses.</li>
-                            <li><span class="font-bold">C. Evolution:</span> He evolved from a Spanish-assimilated student seeking *equal rights* (1880s) to a radicalized advocate demanding *national dignity and self-determination* through enlightenment (1890s), culminating in his silent, powerful martyrdom.</li>
+                            <li><span class="font-bold">A. Virtues and Strengths:</span> <span class="font-bold">Patriotism, Intellectual Genius</span> (polymath and linguist), <span class="font-bold">Moral Courage</span>, and <span class="font-bold">Discipline</span>. His greatest strength was his belief in non-violence and the power of education over force.</li>
+                            <li><span class="font-bold">B. Shortcomings and Weaknesses:</span> <span class="font-bold">Emotional Vulnerability</span> (especially concerning Leonor Rivera), <span class="font-bold">Overly Cautious Pragmatism</span> (initially denouncing the Revolution, believing reforms must come from above), and a degree of <span class="font-bold">Idealism</span> that sometimes detached him from the urgency of the masses.</li>
+                            <li><span class="font-bold">C. Evolution:</span> He evolved from a Spanish-assimilated student seeking <span class="italic">equal rights</span> (1880s) to a radicalized advocate demanding <span class="italic">national dignity and self-determination</span> through enlightenment (1890s), culminating in his silent, powerful martyrdom.</li>
                         </ul>
                     </div>
                 </div>
@@ -169,15 +185,18 @@
             <div class="timeline-dot" style="top: 1700px;"></div>
             <div class="relative py-12 md:py-8 timeline-card-right">
                 <div class="md:w-1/2 md:ml-auto md:pr-12">
-                    <div class="bg-blue-50 p-6 rounded-xl shadow-md space-y-3">
-                        <h4 class="text-xl font-semibold text-rizal-blue">VI. Pitfalls and Heroism (The Final Act)</h4>
+                    <div class="bg-red-50 p-6 rounded-xl shadow-md space-y-3">
+                        <h4 class="text-xl font-semibold text-rizal-primary">VI. Pitfalls and Heroism (The Final Act)</h4>
                         <p class="text-sm font-medium text-gray-500">The Path to Martyrdom</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 text-base">
                             <li><span class="font-bold">A. Challenges and Obstacles:</span> Constant threats of execution, family persecution, and internal conflicts among Filipino propagandists. His major pitfall was the misunderstanding of his peaceful intentions by both the Spanish (who saw him as a rebel) and some Filipino radicals (who saw him as too slow).</li>
-                            <li><span class="font-bold">B. Contribution to Heroic Acts:</span> These pitfalls did not defeat him; they **cemented his moral integrity**. By refusing violence and accepting his unjust execution, his death became the most powerful catalyst for the revolution, proving that the pen (or the ideal) is indeed mightier than the sword.</li>
+                            <li><span class="font-bold">B. Contribution to Heroic Acts:</span> These pitfalls did not defeat him; they <span class="font-bold">cemented his moral integrity</span>. By refusing violence and accepting his unjust execution, his death became the most powerful catalyst for the revolution, proving that the pen (or the ideal) is indeed mightier than the sword.</li>
                         </ul>
-                        <!-- [Image Placeholder: Rizal's execution/monument] -->
-                        <img src="https://placehold.co/400x250/ef4444/ffffff?text=Martyrdom+Image" alt="Rizal's Execution" class="w-full h-auto rounded-lg mt-3 object-cover">
+                        <!-- Image URL for Rizal Monument - PATH UPDATED -->
+                        <img src="./images/rizal-monument-luneta.jpg" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/ef4444/ffffff?text=Rizal+Monument+Luneta';"
+                             alt="Rizal's Execution/Monument" 
+                             class="w-full h-auto rounded-lg mt-3 object-cover shadow-inner">
                     </div>
                 </div>
             </div>
@@ -188,8 +207,8 @@
         <!-- Timeline Container End -->
 
         <!-- VII. Conclusion -->
-        <section id="section-conclusion" class="mt-20 p-6 bg-rizal-blue text-white rounded-xl shadow-2xl">
-            <h3 class="text-2xl font-bold text-rizal-gold mb-4">VII. Conclusion</h3>
+        <section id="section-conclusion" class="mt-20 p-6 bg-rizal-primary text-white rounded-xl shadow-2xl">
+            <h3 class="text-2xl font-bold text-red-300 mb-4">VII. Conclusion</h3>
             <div class="space-y-4 text-lg">
                 <p>The study of Rizal's life confirms that heroism is a complex interaction of innate gifts and environmental forces. His natural intellect, nurtured by an education-centric family, was inevitably thrust against the backdrop of colonial cruelty. The execution of the GOMBURZA and his mother's suffering were the environmental triggers that forged his intellectual commitment into patriotic action.</p>
                 <p>Rizal’s legacy endures because he showed that the fight for freedom is first and foremost a fight for self-respect, dignity, and enlightenment. His martyrdom did not start the revolution, but it provided the moral foundation and inspiration needed to sustain it. He remains the standard for the Filipino idealist—a man who chose education over violence and principle over life itself.</p>
